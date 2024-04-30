@@ -1,0 +1,82 @@
+.Btn {
+    border: 2px solid  #009688;
+    transition: .3s;
+}
+.Btn:hover {
+    background-color: #009688;
+    color: #fff;
+}
+#addInput {
+    border: 2px solid #009688;
+}
+.form-control:focus {
+    border-color: #009688;
+    box-shadow: 0 0 0 0.25rem #009688;
+}
+.cursor:hover {
+    cursor: pointer;
+}
+th {
+    background-color: #009688 !important;
+    color: #fff !important;
+}
+h1 {
+    background-color: #009688;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+.rowInput {
+    background-color: #009688b8;
+}
+i {
+    transition: .3s;
+}
+i:hover {
+    color: #009688;
+}
+
+@media (max-width:767px){
+    html {
+        font-size: 13px;
+    }
+    .colBtn {
+        display: flex;
+        justify-content: center;
+        padding-left: 10px !important;
+    }
+    .colBtn div {
+        width: 100%;
+        margin-block: 10px 5px;
+    }
+    #addProduct {
+        width: 60% !important;
+    }
+}
+
+@media ( max-width:770px ) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:567px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:300px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (max-width:165px) {
+    html {
+        font-size: 4px;
+    }
+}

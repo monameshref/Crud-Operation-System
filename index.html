@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style main css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+
+    <section>
+        <div class="container py-4">
+            <h1 class="text-center py-3">Crud Operation System</h1>
+            <div class="row rowInput g-2 p-4 rounded shadow">
+                <div class="col-md-12">
+                    <input id="titleInput" type="text" placeholder="Title" class="form-control">
+                    <p class="text-danger ps-3 pt-2 d-none titleMessage">The name must be 4 to 15 characters long.</p>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <input id="priceInput" type="number" placeholder="Price" class="form-control">
+                            <p class="text-danger ps-3 pt-2 d-none priceMessage">The number must be 2 to 7 digits.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <input id="taxesInput" type="number" placeholder="Taxes" class="form-control">
+                            <p class="text-danger ps-3 pt-2 d-none taxesMessage">The number must be 2 to 7 digits.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <input id="adsInput" type="number" placeholder="Ads" class="form-control">
+                            <p class="text-danger ps-3 pt-2 d-none adsMessage">The number must be 2 to 7 digits.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input id="descountInput" type="number" placeholder="Discount" class="form-control">
+                                    <p class="text-danger ps-3 pt-2 d-none descountMessage">The number must be 2 to 7 digits.</p>
+                                </div>
+                                <div class="col-md-3 colBtn ps-0">
+                                    <div id="totalbBtn" class="w-100 py-2 text-center rounded bg-danger">Total</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <input id="countInput" type="number" placeholder="Count" class="form-control">
+                    <p class="text-danger ps-3 pt-2 d-none countMessage">The number must be 1 to 3 digits.</p>
+                </div>
+                <div class="col-md-12">
+                    <input id="categoryInput" type="text" placeholder="Category" class="form-control">
+                    <p class="text-danger ps-3 pt-2 d-none categoryMessage">The name must be 4 to 15 characters long.</p>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <button id="addInput" type="submit" class="btn Btn w-25 me-3">Add Product</button>
+                    <button id="updateInput" class="btn Btn w-25 me-3 d-none">Update Product</button>
+                    <input oninput="searchProduct(this.value)" id="searchInput" type="search" placeholder="Search" class="form-control">
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle" class="btn Btn w-50 me-3">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory" class="btn Btn w-50 me-3">Search By Category</button>
+                </div>
+                <button id="deleteAll" class="btn btn-outline-warning w-100 me-3 d-none">Delete All</button>
+
+
+                <div class=" col-md-12">
+                    <div>
+                        <table class="table table-striped text-center ">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Price</th>
+                                    <th>Taxes</th>
+                                    <th>Ads</th>
+                                    <th>Discount</th>
+                                    <th>Total</th>
+                                    <th>Category</th>
+                                    <th>Update</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rowBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- main js -->
+    <script src="js/index.js"></script>
+
+</body>
+</html>
